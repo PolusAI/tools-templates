@@ -4,7 +4,7 @@ This repository is a cookie cutter template that creates the basic scaffold stru
 polus plugin and add it to the polus plugins directory structure.
 
 ## How to use
-1. Clone `tools-templates` and change to the polus-plugins directory
+1. Clone `tools-templates`
 2. `cd tabular-templates/python-template`
 3. (optional) Install poetry if not available.
 4. (optional) Create a dedicated environment with conda or venv.
