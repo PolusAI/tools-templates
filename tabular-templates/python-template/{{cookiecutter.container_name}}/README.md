@@ -15,9 +15,10 @@ contents of `plugin.json` into the pop-up window and submit.
 
 This plugin takes 2 input arguments and 1 output argument:
 
-| Name          | Description             | I/O    | Type   | Default
-|---------------|-------------------------|--------|--------|
-| inpDir        | Input image collection to be processed by this plugin | Input | collection
-| filePattern   | Filename pattern used to separate data | Input | string | .*
-| preview   | Generate an output preview | Input | boolean | False
-| outDir        | Output collection | Output | collection
+
+| Name               | Description                       | I/O      | Type       |
+|--------------------|-----------------------------------|----------|------------|
+| `--inpDir`         | Input image collection            | Input    | collection |
+| `--filePattern`    | Input filename pattern            | Input    | string     |
+| `--preview`        | Generate a JSON file with outputs | Input    | boolean    |
+| `--outDir`         | Output collection                 | Output   | collection |
