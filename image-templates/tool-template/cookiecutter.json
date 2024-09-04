@@ -1,0 +1,17 @@
+{
+    "author": "Data Scientist",
+    "author_email": "data.scientist@nih.org",
+    "tool_name": "Awesome",
+    "tool_package": "polus.images.part1.part2.awesome",
+    "tool_description": "Testing the template.",
+    "tool_version": "0.1.0",
+    "cwl_path": "path/to/cwl/file",
+    "package_parts": "{% set package_parts = ('/').join(cookiecutter.tool_package.split('.')[2:])%}{{ package_parts }}",
+    "package_folders": "{%set folders = cookiecutter.tool_package.replace('.', '/') %}{{folders}}",
+    "package_name": "{% set packages = cookiecutter.tool_package.split('.') %}{{ packages | last }}",
+    "project_name": "{% set project_name = cookiecutter.tool_package.replace('_', '-').replace('.', '-') %}{{ project_name }}",
+    "tool_slug": "{% set tool_slug = cookiecutter.package_name.replace('_', '-') %}{{tool_slug}}-tool",
+    "container_name": "{% set container_name = ('-').join(cookiecutter.tool_slug.split('-'))%}{{ container_name }}",
+    "container_id": "polusai/{{cookiecutter.container_name}}",
+    "container_version": "{{cookiecutter.tool_version}}"
+}

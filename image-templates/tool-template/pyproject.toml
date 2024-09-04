@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "tool-template"
+version = "0.1.0-dev0"
+description = ""
+authors = ["Najib Ishaq <najib.ishaq@nih.gov>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+cookiecutter = "2.6.0"
+jinja2-ospath = "^0.3.0"
+polus-tools = {git = "https://github.com/PolusAI/tools.git"}
+pydantic = "2.7.4"
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+pre-commit = "^3.8.0"
+pytest = "^8.3.2"
+pytest-sugar = "^1.0.0"
+pytest-xdist = "^3.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
