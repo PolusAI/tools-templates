@@ -16,8 +16,7 @@ logger.setLevel(POLUS_LOG)
 
 # Validate CWL file.
 cwl_path = pathlib.Path("{{ cookiecutter.cwl_path }}").resolve()
-# Since we are in the hooks folder, we need to go up two levels to find the CWL file.
-cwl_path = cwl_path.parent.parent / cwl_path.name
+cwl_path = cwl_path.parent / cwl_path.name
 if not cwl_path.exists():
     raise FileNotFoundError(f"Could not find CWL file at {cwl_path}")
 try:

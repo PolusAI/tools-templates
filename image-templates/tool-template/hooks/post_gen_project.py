@@ -24,7 +24,7 @@ logger.setLevel(POLUS_LOG)
 def create_main_file(target_dir: pathlib.Path):
     """Create the typer CLI args from a CWL file."""
     cwl_file = pathlib.Path("{{ cookiecutter.cwl_path }}").resolve()
-    cwl_file = cwl_file.parent.parent / cwl_file.name
+    cwl_file = cwl_file.parent / cwl_file.name
     clt = CommandLineTool.load(cwl_file)
 
     # Find a file named __main__.py in the target directory.
@@ -334,6 +334,6 @@ if __name__ == "__main__":
     create_wipp_manifest(source_dir.parent)
 
     cwl_file = pathlib.Path("{{ cookiecutter.cwl_path }}").resolve()
-    cwl_file = cwl_file.parent.parent / cwl_file.name
+    cwl_file = cwl_file.parent / cwl_file.name
     out_path = source_dir.parent / "{{ cookiecutter.tool_slug }}" / cwl_file.name
     shutil.copyfile(cwl_file, out_path)
