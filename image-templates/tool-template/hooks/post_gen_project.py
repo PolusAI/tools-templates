@@ -206,10 +206,7 @@ class Boolean(CWLType):
     
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the boolean."""
-        options = {"help": self.doc}
-        if self.has_default:
-            options["default"] = self.default()
-        return options
+        return {}
     
     @property
     def type_name(self) -> str:
@@ -226,10 +223,7 @@ class Int(CWLType):
     
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the integer."""
-        options = {"help": self.doc}
-        if self.has_default:
-            options["default"] = self.default()
-        return options
+        return {}
     
     @property
     def type_name(self) -> str:
@@ -246,10 +240,7 @@ class Float(CWLType):
     
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the float."""
-        options = {"help": self.doc}
-        if self.has_default:
-            options["default"] = self.default()
-        return options
+        return {}
     
     @property
     def type_name(self) -> str:
@@ -266,10 +257,7 @@ class String(CWLType):
     
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the string."""
-        options = {"help": self.doc}
-        if self.has_default:
-            options["default"] = self.default()
-        return options
+        return {}
     
     @property
     def type_name(self) -> str:
@@ -287,7 +275,6 @@ class File(CWLType):
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the file."""
         return dict(
-            help=self.doc,
             exists=True,
             file_okay=True,
             dir_okay=False,
@@ -310,7 +297,6 @@ class Directory(CWLType):
     def typer_options(self) -> typing.Dict[str, typing.Any]:
         """Return the typer options for the directory."""
         return dict(
-            help=self.doc,
             exists=True,
             file_okay=False,
             dir_okay=True,
